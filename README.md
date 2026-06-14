@@ -13,8 +13,11 @@ For this to work you would need to have an enterprise version of Checkmk (At lea
 This is just an example workflow that shows how we produce and consume metrics in Grafana. 
 
 1.) Data is exported using the InfluxDB connector 
+
 2.) Data is forwared towards Nginx, this is to supply the Checkmk needed /ping endpoint that VM does not support
+
 3.) Data is sent to a Victoria Metrics cluster (That supports Influx DB 2 format) 
+
 4.) A normal Prometheus datasource is added to Grafana to explore, use drilldown and create dashboards 
 
 ### Usage
